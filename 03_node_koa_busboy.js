@@ -32,6 +32,7 @@ app.use(async (ctx, next) => {
   await next();
 
   /*
+  // This is one way to keep the request from stalling:
   ctx.req.unpipe(parser);
   ctx.req.resume();
   parser.destroy();
